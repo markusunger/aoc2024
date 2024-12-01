@@ -8,11 +8,9 @@ first_list = []
 second_list = []
 
 for line in input:
-    pair = line.split()
-    first = int(pair[0])
-    second = int(pair[1])
-    first_list.append(first)
-    second_list.append(second)
+    (first, second) = line.split()
+    first_list.append(int(first))
+    second_list.append(int(second))
 
 first_list.sort()
 second_list.sort()
@@ -20,8 +18,7 @@ second_list.sort()
 total = 0
 
 for i in range(len(first_list)):
-    abs_diff = abs(first_list[i] - second_list[i])
-    total += abs_diff
+    total += abs(first_list[i] - second_list[i])
 
 print('part 1 solution:', total)
 
